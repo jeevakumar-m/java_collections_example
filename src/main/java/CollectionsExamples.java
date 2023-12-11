@@ -26,7 +26,19 @@ public class CollectionsExamples {
         fruits.removeFirst();
         fruits.add(0,"Anton");
 
+
         System.out.println(fruits);
+        System.out.println(fruits.get(0));
+
+        for (String s: fruits)
+        {
+            System.out.println("modern for loop=" + s);
+        }
+
+        for(int i=0;i<fruits.size();i++)
+        {
+            System.out.println("Classical for =" + fruits.get(i));
+        }
 
         Iterator<String> it = fruits.iterator();
 
