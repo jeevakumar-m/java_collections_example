@@ -274,6 +274,45 @@ public class CollectionsExamples {
         System.out.println("Is this a valid expression : " + isValid);
     }
 
+    public static void queue_example()
+    {
+        Queue<Integer> qInt = new PriorityQueue<>();
+        Integer[] arr = {12,3,4,5,6};
+
+        qInt.addAll(Arrays.asList(arr));
+        qInt.add(100);
+        qInt.add(1);
+        qInt.add(2);
+
+        System.out.println(qInt);
+
+        System.out.println("peek"+qInt.peek());
+
+        qInt.remove();
+        System.out.println(qInt);
+        System.out.println("peek"+qInt.peek());
+
+        System.out.println("Poll = " + qInt.poll());
+        System.out.println(qInt);
+        System.out.println("Peek" + qInt.peek());
+
+
+        Iterator<Integer> it = qInt.iterator();
+
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+        }
+
+        for (int i:qInt)
+        {
+            System.out.println(i);
+        }
+
+
+
+
+    }
 
 
 
@@ -284,12 +323,12 @@ public class CollectionsExamples {
 
     public static void main(String args[])
     {
-        stack_example("({[{}()]})");
-        stack_example("{{[[(())]]}}");
-        stack_example("{}[]()");
-        stack_example("({[{}()]})}");
-        stack_example("{{[[(())]}}");
-
+//        stack_example("({[{}()]})");
+//        stack_example("{{[[(())]]}}");
+//        stack_example("{}[]()");
+//        stack_example("({[{}()]})}");
+//        stack_example("{{[[(())]}}");
+          queue_example();
 
     }
 }
