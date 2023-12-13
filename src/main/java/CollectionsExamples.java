@@ -314,6 +314,49 @@ public class CollectionsExamples {
 
     }
 
+    public static void set_example()
+    {
+        Integer[] A = {100,13,24,63,3,4,15,345,56};
+        Integer[] B = {12,4,36,38};
+
+        Set<Integer> s1 = new HashSet<>();
+
+        s1.addAll(Arrays.asList(A));
+        System.out.println(s1);
+        s1.addAll(Arrays.asList(B));
+        System.out.println(s1);
+
+        s1.add(null);
+        System.out.println(s1);
+
+
+        Iterator<Integer> it = s1.iterator();
+
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+        }
+
+
+        System.out.println("Linked HashSet");
+        Set<Integer> s2 = new LinkedHashSet<>();
+
+        s2.addAll(Arrays.asList(A));
+        System.out.println(s2);
+        s2.addAll(Arrays.asList(B));
+        System.out.println(s2);
+
+        System.out.println("Tree set / sorted set");
+        SortedSet<Integer> sSet = new TreeSet<>();
+        sSet.addAll(Arrays.asList(A));
+        System.out.println(sSet);
+        sSet.addAll(Arrays.asList(B));
+        System.out.println(sSet);
+        TreeSet<Integer> desc = new TreeSet<>();
+        desc.addAll(sSet);
+        System.out.println(desc.descendingSet());
+
+    }
 
 
 
@@ -328,7 +371,7 @@ public class CollectionsExamples {
 //        stack_example("{}[]()");
 //        stack_example("({[{}()]})}");
 //        stack_example("{{[[(())]}}");
-          queue_example();
+        set_example();
 
     }
 }
