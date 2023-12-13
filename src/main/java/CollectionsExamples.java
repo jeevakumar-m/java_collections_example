@@ -358,8 +358,50 @@ public class CollectionsExamples {
 
     }
 
+    public static void map_example()
+    {
+        Map<Integer,String> studentList = new HashMap<>();
+
+        studentList.put(1,"Anton");
+        studentList.put(2,"Amrutha");
+        studentList.put(3,"Bala");
+        System.out.println(studentList);
+
+        studentList.put(2,"Ayesha");
+        studentList.put(4,"Anandraja");
+
+        for(Map.Entry<Integer,String> e: studentList.entrySet())
+        {
+            System.out.println("Key- " + e.getKey());
+            System.out.println("Value - " + e.getValue());
+        }
 
 
+    }
+
+    public static void frequencyofCharactersInasentence()
+    {
+        String sentence ="What is your name ? My name is Gandhiji and Im from india";
+       // a - 6 , W - 1 , h - 2
+        // Good Morning ---> Gd Morni
+        Map<Character,Integer> freqMap = new HashMap<Character,Integer>();
+
+        for(Character c : sentence.toCharArray())
+        {
+            System.out.println(c);
+            if(freqMap.containsKey(c))
+            {
+                int count = freqMap.get(c);
+                freqMap.put(c,count+1);
+            }
+            else
+            {
+                freqMap.put(c,1);
+            }
+        }
+
+        System.out.println(freqMap);
+    }
 
 
 
@@ -371,7 +413,7 @@ public class CollectionsExamples {
 //        stack_example("{}[]()");
 //        stack_example("({[{}()]})}");
 //        stack_example("{{[[(())]}}");
-        set_example();
+        frequencyofCharactersInasentence();
 
     }
 }
